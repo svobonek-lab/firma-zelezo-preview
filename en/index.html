@@ -2,258 +2,266 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zelezo Admin – System Preview | Synology NAS</title>
-<meta name="description" content="Interactive preview of a business system on a Synology NAS – invoicing, documents and CRM in one place.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zelezo Admin — operating system for metalwork & roofing companies</title>
+<meta name="description" content="Invoicing, documents and CRM in one place. Runs on your Synology NAS — no third-party cloud, no monthly fees.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%234f8cff'/%3E%3Cpath d='M7 8h10M7 12h10M7 16h6' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230a1628'/%3E%3Cpath d='M4 8h10M4 12h10M4 16h6' stroke='%232dd4bf' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
 </head>
 <body>
 
-<nav class="nav">
-  <div class="container nav-inner">
+<header>
+  <div class="wrap header-row">
     <a class="brand" href="../index.html">
-      <span class="logo"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="4" stroke="white" stroke-width="2"/><path d="M8 9h8M8 13h8M8 17h5" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></span>
-      Zelezo&nbsp;Admin
+      <div class="dot"></div>
+      <div class="brand-name">Zelezo&nbsp;Admin</div>
     </a>
     <div class="nav-links">
+      <a href="#problem">Problem</a>
+      <a href="#features">Features</a>
       <a href="#preview">Preview</a>
-      <a href="#how">How it works</a>
-      <a href="#services">Services</a>
-      <a href="#security">Security</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
       <span class="lang-toggle">
         <a href="../index.html">Čeština</a>
         <a class="active" href="index.html">EN</a>
       </span>
     </div>
   </div>
-</nav>
-
-<header class="hero">
-  <div class="container">
-    <span class="badge"><span class="dot"></span>Live preview – runs on a Synology NAS</span>
-    <h1>Invoicing, documents &amp; CRM<br>on one <span class="grad">secure home</span></h1>
-    <p class="sub">Your own business system hosted on a self-owned Synology NAS. Everything under control, data only yours, automatic backups.</p>
-    <div class="btn-row">
-      <a class="btn btn-primary" href="#preview">View preview</a>
-      <a class="btn btn-ghost" href="#services">Service overview</a>
-    </div>
-  </div>
 </header>
 
-<!-- ===== DASHBOARD PREVIEW ===== -->
-<section class="dashboard" id="preview">
-  <div class="container">
-    <div class="dash">
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-eyebrow">Invoicing · documents · CRM on your NAS</div>
+    <h1>Your business without chaos,<br>data <span>only yours</span>, not in someone&apos;s cloud.</h1>
+    <p>Invoices, contracts, customers and scans in one connected system — running directly on
+       your Synology NAS. No monthly subscriptions, no per-user fees, no third-party servers.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn btn-primary">Book a demo →</a>
+      <a href="#preview" class="btn">See it live</a>
+    </div>
+    <div class="hero-note">Deployed on your NAS in ~15 minutes &middot; everything in one place</div>
+  </div>
+</section>
+
+
+<div class="stripe">
+  <div><b>3</b><span>areas in one system</span></div>
+  <div><b>0</b><span>per user, per month</span></div>
+  <div><b>15 min</b><span>to first launch</span></div>
+  <div><b>100%</b><span>data stays with you</span></div>
+</div>
+
+
+<section id="problem">
+  <div class="wrap">
+    <div class="section-eyebrow">The reality of a small metalwork firm</div>
+    <div class="section-title">Invoice in a folder,<br>contract in an e-mail, scan in the phone</div>
+    <div class="section-sub">Sounds familiar — and you&apos;re not alone. This is what we most often hear from metalwork and roofing owners with 3–30 people.</div>
+    <div class="problem-grid">
+      <div class="problem-card"><b>Documents everywhere</b><p>Invoice at the accountant&apos;s, scan in the foreman&apos;s phone, contract in an e-mail. Finding one takes half an hour.</p></div>
+      <div class="problem-card"><b>Customers in memory</b><p>History, job status and quotes live more in heads than in a system. A new colleague knows nothing.</p></div>
+      <div class="problem-card"><b>Paying for third-party cloud</b><p>Monthly CRM fees grow with users, and your data sits on a server you don&apos;t own.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<section id="features" style="background:var(--panel-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-eyebrow">What you get</div>
+    <div class="section-title">Three modules, one connected system</div>
+    <div class="section-sub">Everything talks to each other — a received invoice is filed, an issued document is stored with the job, and every customer has a full history.</div>
+    <div class="feature-grid">
+      <div class="feature"><div class="feature-num">01</div><div><b>Invoicing</b><p>Issue and receive invoices with one click. Overview of issued / paid / overdue, PDF with your logo saved straight to the folder.</p></div></div>
+      <div class="feature"><div class="feature-num">02</div><div><b>Digital archive</b><p>A scan of a contract, certificate or warranty card — CZ OCR turns paper into searchable text. Find anything in seconds.</p></div></div>
+      <div class="feature"><div class="feature-num">03</div><div><b>CRM</b><p>All customers with full history — from enquiry to complaint. Nobody gets lost and everyone knows who owns what.</p></div></div>
+      <div class="feature"><div class="feature-num">04</div><div><b>Automatic folders</b><p>Every job and invoice gets its own folder structure on your NAS — nothing gets mixed up and everything is in place.</p></div></div>
+      <div class="feature"><div class="feature-num">05</div><div><b>Custom domains + HTTPS</b><p>One secure entry point to all services through a proxy with Let&apos;s Encrypt. Invoices, documents and CRM on your own addresses.</p></div></div>
+      <div class="feature"><div class="feature-num">06</div><div><b>Backups &amp; monitoring</b><p>Automatic encrypted backups every night and 24/7 monitoring that everything keeps running.</p></div></div>
+    </div>
+  </div>
+</section>
+
+
+<section id="preview">
+  <div class="wrap">
+    <div class="section-eyebrow">Live preview</div>
+    <div class="section-title">This is how it runs for us</div>
+    <div class="section-sub">The administrator dashboard — all services in one place. Statuses refresh live, exactly like in production.</div>
+    <div class="titleblock preview-shell">
+      <div class="tb-corner tl"></div><div class="tb-corner tr"></div><div class="tb-corner bl"></div><div class="tb-corner br"></div>
       <div class="dash-bar">
-        <div class="traffic"><span class="t-traffic-red"></span><span class="t-yellow"></span><span class="t-green"></span></div>
+        <div class="traffic"><span class="t-red"></span><span class="t-yellow"></span><span class="t-green"></span></div>
         <span class="dash-url">https://admin.firma-zelezo.cz</span>
       </div>
       <div class="dash-grid">
 
         <div class="status-row">
           <div class="status-left">
-            <span class="status-icon" style="background:#f39c12">🧾</span>
+            <span class="status-icon" style="background:var(--orange)">💰</span>
             <div>
-              <div class="status-name">InvoiceNinja</div>
-              <div class="status-url">Invoicing · VAT · payment receipts</div>
+              <div class="status-name">Invoicing · InvoiceNinja</div>
+              <div class="status-url">fakturace.firma-zelezo.cz</div>
             </div>
           </div>
-          <span class="status-pill" data-service="invoice" data-up="online" data-checking="check" data-interval="6200">🧾</span>
+          <span class="status-pill" data-service="invoice" data-up="online" data-checking="test">online</span>
         </div>
 
         <div class="status-row">
           <div class="status-left">
-            <span class="status-icon" style="background:#4f8cff">📄</span>
+            <span class="status-icon" style="background:var(--teal)">📄</span>
             <div>
-              <div class="status-name">Paperless-ngx</div>
-              <div class="status-url">Contracts · invoices · certificates (CZ OCR)</div>
+              <div class="status-name">Digital archive · Paperless</div>
+              <div class="status-url">dokumenty.firma-zelezo.cz</div>
             </div>
           </div>
-          <span class="status-pill" data-service="paperless" data-up="online" data-checking="check" data-interval="7000">📄</span>
+          <span class="status-pill" data-service="paperless" data-up="online" data-checking="test">online</span>
         </div>
 
         <div class="status-row">
           <div class="status-left">
-            <span class="status-icon" style="background:#a78bfa">🤝</span>
+            <span class="status-icon" style="background:var(--violet)">🤝</span>
             <div>
-              <div class="status-name">SuiteCRM</div>
-              <div class="status-url">Customers · sales cases · offers</div>
+              <div class="status-name">CRM · SuiteCRM</div>
+              <div class="status-url">crm.firma-zelezo.cz</div>
             </div>
           </div>
-          <span class="status-pill" data-service="crm" data-up="online" data-checking="check" data-interval="6500">🤝</span>
+          <span class="status-pill" data-service="crm" data-up="online" data-checking="test">online</span>
         </div>
 
         <div class="status-row">
           <div class="status-left">
-            <span class="status-icon" style="background:#2ecc71">🛡️</span>
+            <span class="status-icon" style="background:var(--yellow)">🛡️</span>
             <div>
-              <div class="status-name">Nginx Proxy Manager</div>
-              <div class="status-url">HTTPS · Let&#39;s Encrypt · custom domains</div>
+              <div class="status-name">Proxy + HTTPS · NPM</div>
+              <div class="status-url">Let&apos;s Encrypt</div>
             </div>
           </div>
-          <span class="status-pill" data-service="npm" data-up="online" data-checking="check" data-interval="7800">🛡️</span>
+          <span class="status-pill" data-service="npm" data-up="online" data-checking="test">online</span>
         </div>
 
         <div class="status-row">
           <div class="status-left">
-            <span class="status-icon" style="background:#e67e22">💾</span>
+            <span class="status-icon" style="background:var(--red)">💾</span>
             <div>
-              <div class="status-name">Duplicati</div>
-              <div class="status-url">Automatic backups · daily 02:00</div>
+              <div class="status-name">Backups · Duplicati</div>
+              <div class="status-url">daily 02:00 · encrypted</div>
             </div>
           </div>
-          <span class="status-pill" data-service="duplicati" data-up="online" data-checking="check" data-interval="8000">💾</span>
+          <span class="status-pill" data-service="duplicati" data-up="online" data-checking="test">online</span>
         </div>
 
         <div class="status-row">
           <div class="status-left">
-            <span class="status-icon" style="background:#e74c3c">📈</span>
+            <span class="status-icon" style="background:var(--teal)">📈</span>
             <div>
-              <div class="status-name">Uptime Kuma</div>
-              <div class="status-url">Availability monitoring · 99.9%</div>
+              <div class="status-name">Monitoring · Uptime Kuma</div>
+              <div class="status-url">24/7 · alert on failure</div>
             </div>
           </div>
-          <span class="status-pill" data-service="uptime" data-up="online" data-checking="check" data-interval="8400">📈</span>
+          <span class="status-pill" data-service="uptime" data-up="online" data-checking="test">online</span>
         </div>
 
       </div>
+      <div class="preview-caption">statuses refresh live</div>
     </div>
   </div>
 </section>
 
-<!-- ===== HOW IT WORKS ===== -->
-<section class="section" id="how">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Workflow</span>
-      <h2>How it works</h2>
-      <p>From an incoming document to a finished invoice – every step has its own automated process.</p>
-    </div>
-    <div class="steps">
-      <div class="step">
-        <span class="step-num">1</span>
-        <h3>Document intake</h3>
-        <p>Drop a PDF into the <code>consume</code> folder (over SMB) or upload it in the web app. The system picks it up in real time.</p>
-      </div>
-      <div class="step">
-        <span class="step-num">2</span>
-        <h3>OCR &amp; recognition</h3>
-        <p>Paperless turns a scan into searchable text (Czech + English) and stores it in the database. Files are tagged automatically.</p>
-      </div>
-      <div class="step">
-        <span class="step-num">3</span>
-        <h3>Invoicing</h3>
-        <p>From the customer data in CRM you create an invoice in InvoiceNinja – with VAT, numbers and attachment.</p>
-      </div>
-      <div class="step">
-        <span class="step-num">4</span>
-        <h3>Backup &amp; monitoring</h3>
-        <p>Duplicati backs up data daily, Uptime Kuma watches everything. You just focus on the work.</p>
-      </div>
+
+<section id="how" style="background:var(--panel-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-eyebrow">Deployment</div>
+    <div class="section-title">Three steps to go live</div>
+    <div class="how-steps">
+      <div class="how-step"><div class="how-num">1</div><b>Install on your NAS</b><p>One command in Synology Container Manager. The system runs fully at your place — no third-party cloud.</p></div>
+      <div class="how-step"><div class="how-num">2</div><b>Connect your data</b><p>Upload invoices, contracts and contacts. OCR processes them at once, CRM organises your customers.</p></div>
+      <div class="how-step"><div class="how-num">3</div><b>Your own addresses</b><p>Set up domains and HTTPS (or LAN access only). You and your team log in and go.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ===== SERVICES ===== -->
-<section class="section" id="services">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Services</span>
-      <h2>A modular system built for you</h2>
-      <p>Each service runs in an isolated container. Add, remove or adjust as needed – without touching the rest of the system.</p>
-    </div>
-    <div class="cards">
-      <div class="card">
-        <span class="status-icon" style="background:#f39c12">🧾</span>
-        <h3>InvoiceNinja</h3>
-        <p>Complete invoicing – issuing, VAT, payment receipts, recurring invoices and reports.</p>
-        <div class="meta"><span class="tag">Port 8011</span><span class="tag">Invoices</span><span class="tag">VAT</span></div>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="section-eyebrow">A model that makes sense</div>
+    <div class="section-title">Pay once, own it forever</div>
+    <div class="section-sub">No monthly per-user fees — the system runs on your hardware and you have full control over the data.</div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-tier">Basic</div>
+        <div class="price-amt">1&nbsp;450&nbsp;€<small>/one-time</small></div>
+        <div class="price-desc">For a firm that wants invoices and documents finally in a system.</div>
+        <ul class="price-list">
+          <li>Invoicing (issued + received)</li>
+          <li>Digital archive + CZ OCR</li>
+          <li>Installation on your Synology NAS</li>
+          <li>Backups and monitoring included</li>
+        </ul>
+        <a href="#contact" class="btn">Request</a>
       </div>
-      <div class="card">
-        <span class="status-icon" style="background:#4f8cff">📄</span>
-        <h3>Paperless-ngx</h3>
-        <p>A digital document archive with OCR. Everything searchable, tagged and always at hand.</p>
-        <div class="meta"><span class="tag">Port 8012</span><span class="tag">OCR</span><span class="tag">Archive</span></div>
+      <div class="price-card featured">
+        <div class="price-badge">Most popular</div>
+        <div class="price-tier">Pro</div>
+        <div class="price-amt">2&nbsp;750&nbsp;€<small>/one-time</small></div>
+        <div class="price-desc">Full system with CRM and custom domains for firms with a team.</div>
+        <ul class="price-list">
+          <li>Everything in Basic</li>
+          <li>CRM — customers and history</li>
+          <li>Custom domains + HTTPS (Let&apos;s Encrypt)</li>
+          <li>3 months of onboarding support</li>
+          <li>Team training</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Request</a>
       </div>
-      <div class="card">
-        <span class="status-icon" style="background:#a78bfa">🤝</span>
-        <h3>SuiteCRM</h3>
-        <p>Customer relationship management, sales cases, offers and team collaboration.</p>
-        <div class="meta"><span class="tag">Port 8013</span><span class="tag">CRM</span><span class="tag">Customers</span></div>
-      </div>
-      <div class="card">
-        <span class="status-icon" style="background:#2ecc71">🛡️</span>
-        <h3>Nginx Proxy Manager</h3>
-        <p>Easy HTTPS and custom domains with Let&#39;s Encrypt. One entry point to all services.</p>
-        <div class="meta"><span class="tag">Port 8181</span><span class="tag">HTTPS</span><span class="tag">Proxy</span></div>
-      </div>
-      <div class="card">
-        <span class="status-icon" style="background:#e67e22">💾</span>
-        <h3>Duplicati</h3>
-        <p>Automated encrypted backups of the whole system – local and cloud, with a retention plan.</p>
-        <div class="meta"><span class="tag">Port 8014</span><span class="tag">Backup</span><span class="tag">02:00</span></div>
-      </div>
-      <div class="card">
-        <span class="status-icon" style="background:#e74c3c">📈</span>
-        <h3>Uptime Kuma</h3>
-        <p>24/7 availability monitoring of all services, with instant alert on failure.</p>
-        <div class="meta"><span class="tag">Port 8015</span><span class="tag">Monitoring</span></div>
+      <div class="price-card">
+        <div class="price-tier">Custom</div>
+        <div class="price-amt">4&nbsp;600&nbsp;€+<small>/one-time</small></div>
+        <div class="price-desc">Accounting integration, field app, multiple locations.</div>
+        <ul class="price-list">
+          <li>Everything in Pro</li>
+          <li>Accounting integration (Pohoda, ABRA…)</li>
+          <li>Mobile app for field staff</li>
+          <li>Priority support</li>
+        </ul>
+        <a href="#contact" class="btn">Free consultation</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== ARCHITECTURE ===== -->
-<section class="section" id="architecture">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Architecture</span>
-      <h2>One installation, many layers</h2>
-      <p>Databases and cache run separately under each service so they never compete with each other.</p>
-    </div>
-    <div class="arch">
-      <div class="arch-item"><div class="ic">🐬</div><h4>MariaDB 10.11</h4><p>Invoicing + CRM</p></div>
-      <div class="arch-item"><div class="ic">🐘</div><h4>PostgreSQL 16</h4><p>Paperless documents</p></div>
-      <div class="arch-item"><div class="ic">⚡</div><h4>Redis 7</h4><p>Cache &amp; sessions</p></div>
-      <div class="arch-item"><div class="ic">🖨️</div><h4>Gotenberg + Tika</h4><p>PDF processing &amp; OCR</p></div>
-      <div class="arch-item"><div class="ic">🐳</div><h4>Docker / Synology</h4><p>Isolation &amp; easy deploy</p></div>
+
+<section id="faq" style="background:var(--panel-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-eyebrow">Questions</div>
+    <div class="section-title" style="margin-bottom:40px;">Frequently asked</div>
+    <div class="faq">
+      <div class="faq-item"><b>Do we need a Synology NAS?</b><p>Yes, the system runs via Docker on Synology (or another NAS/server with Docker support). If you don&apos;t have one, we&apos;ll help you choose — the purchase price is far lower than a year of a typical cloud CRM subscription.</p></div>
+      <div class="faq-item"><b>What if we have no IT person?</b><p>Installation is a single guided script — even the owner can handle it. The Pro bundle includes 3 months of onboarding support.</p></div>
+      <div class="faq-item"><b>Is our data safe?</b><p>The data stays physically on your NAS. Nothing is copied to a third-party cloud. Connections are encrypted with HTTPS and backups are encrypted and automatic.</p></div>
+      <div class="faq-item"><b>Can we try it first?</b><p>Yes — we&apos;re happy to show a live demo on your data before you order, even with your real documents.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ===== SECURITY ===== -->
-<section class="section" id="security">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Security</span>
-      <h2>Your data stays yours</h2>
-    </div>
-    <div class="security">
-      <ul>
-        <li><span class="tick">✓</span> Self-hosted on your own NAS – no third-party cloud for confidential documents</li>
-        <li><span class="tick">✓</span> HTTPS encryption via Let&apos;s Encrypt on all services</li>
-        <li><span class="tick">✓</span> Automatic encrypted backups with a retention of 7 daily / 4 weekly / 12 monthly copies</li>
-        <li><span class="tick">✓</span> Firewall + recommended access only via VPN (Tailscale/Synology VPN Server)</li>
-        <li><span class="tick">✓</span> Strong random passwords generated at install, stored only in <code>.env</code></li>
-      </ul>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="cta-final">
+      <h2>Let us show it to you live</h2>
+      <p>30 minutes, no obligation. You&apos;ll see the whole system — invoicing, archive and CRM — on your own documents.</p>
+      <a href="mailto:info@firma-zelezo.cz?subject=Zelezo%20Admin%20demo" class="btn btn-primary">Write to info@firma-zelezo.cz →</a>
     </div>
   </div>
 </section>
 
-<!-- ===== CTA ===== -->
-<section class="section">
-  <div class="container">
-    <div class="cta-band">
-      <h2>Want the same for your business?</h2>
-      <p>I prepare, install and configure the whole system on your Synology NAS – invoicing, archive and CRM.</p>
-      <a class="btn btn-primary" href="mailto:info@firma-zelezo.cz?subject=System%20deployment%20on%20NAS">Ask without obligation</a>
-    </div>
-  </div>
-</section>
 
-<footer class="footer">
-  <div class="container">Zelezo&nbsp;Admin · Synology NAS · © 2026 · System preview</div>
+<footer>
+  <div class="wrap">Zelezo Admin — invoicing, documents and CRM. Runs on your own Synology NAS.</div>
 </footer>
 
 <script src="../assets/app.js"></script>

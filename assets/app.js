@@ -1,45 +1,36 @@
 (function () {
   "use strict";
 
-  // Animated live status preview: randomly toggles a service to "connecting"
-  // briefly to simulate live monitoring, then back to online.
+  // Animated live-preview: each service briefly shows a "test" blip
+  // then returns to "online", simulating continuous monitoring.
   var pills = document.querySelectorAll(".status-pill[data-service]");
-  var state = {};
+  if (!pills.length) return;
 
-  function setOnline(el) {
-    el.classList.remove("off");
-    el.innerHTML =
-      '<span class="dot"></span><span data-live="up"></span>';
-    var up = el.querySelector('[data-live="up"]');
-    up.textContent = el.getAttribute("data-up");
+  function dot(color) {
+    return '<span class="dot" style="background:' + color + ";box-shadow:0 0 6px " + color + '"></span>';
   }
 
-  function setBlip(el) {
-    el.classList.add("off");
-    el.innerHTML = '<span class="dot"></span><span data-live="up">' +
-      el.getAttribute("data-checking") + "&#8230;</span>";
+  function render(el, color, text) {
+    el.innerHTML = dot(color) + "<span>" + text + "</span>";
+    el.style.color = color;
+    el.style.background = "rgba(45,212,191,0.08)";
+    el.style.borderColor = color;
   }
 
   pills.forEach(function (el) {
-    var keep = parseInt(el.getAttribute("data-interval") || 5000, 10);
-    setOnline(el);
-    state[el.getAttribute("data-service")] = { el: el, keep: keep };
+    render(el, "var(--teal)", el.getAttribute("data-up"));
   });
+  var services = Array.prototype.slice.call(pills);
 
   function loop() {
-    var keys = Object.keys(state);
-    if (keys.length === 0) return;
-    var k = keys[Math.floor(Math.random() * keys.length)];
-    var s = state[k];
-    var el = s.el;
-    setBlip(el);
+    var el = services[Math.floor(Math.random() * services.length)];
+    var checking = el.getAttribute("data-checking");
+    render(el, "var(--yellow)", checking + "…");
     setTimeout(function () {
-      setOnline(el);
-      setTimeout(loop, 400 + Math.random() * 2600);
-    }, 700 + Math.random() * 900);
+      render(el, "var(--teal)", el.getAttribute("data-up"));
+      setTimeout(loop, 500 + Math.random() * 2400);
+    }, 800 + Math.random() * 900);
   }
 
-  if (Object.keys(state).length > 0) {
-    setTimeout(loop, 900);
-  }
+  setTimeout(loop, 900);
 })();
