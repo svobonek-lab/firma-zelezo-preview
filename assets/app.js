@@ -1,36 +1,30 @@
 (function () {
   "use strict";
 
-  // Animated live-preview: each service briefly shows a "test" blip
-  // then returns to "online", simulating continuous monitoring.
-  var pills = document.querySelectorAll(".status-pill[data-service]");
+  var pills = document.querySelectorAll(".service .pill[data-service]");
   if (!pills.length) return;
 
-  function dot(color) {
-    return '<span class="dot" style="background:' + color + ";box-shadow:0 0 6px " + color + '"></span>';
-  }
-
-  function render(el, color, text) {
-    el.innerHTML = dot(color) + "<span>" + text + "</span>";
+  function setPill(el, color, bg, border, text) {
     el.style.color = color;
-    el.style.background = "rgba(45,212,191,0.08)";
-    el.style.borderColor = color;
+    el.style.background = bg;
+    el.style.borderColor = border;
+    el.innerHTML = '<span class="pdot"></span>' + text;
   }
 
   pills.forEach(function (el) {
-    render(el, "var(--teal)", el.getAttribute("data-up"));
+    setPill(el, "var(--ok)", "rgba(92,185,138,0.10)", "rgba(92,185,138,0.35)", el.getAttribute("data-up"));
   });
-  var services = Array.prototype.slice.call(pills);
+
+  var list = Array.prototype.slice.call(pills);
 
   function loop() {
-    var el = services[Math.floor(Math.random() * services.length)];
-    var checking = el.getAttribute("data-checking");
-    render(el, "var(--yellow)", checking + "…");
+    var el = list[Math.floor(Math.random() * list.length)];
+    setPill(el, "var(--accent)", "rgba(224,162,75,0.10)", "rgba(224,162,75,0.35)", el.getAttribute("data-checking") + "…");
     setTimeout(function () {
-      render(el, "var(--teal)", el.getAttribute("data-up"));
-      setTimeout(loop, 500 + Math.random() * 2400);
-    }, 800 + Math.random() * 900);
+      setPill(el, "var(--ok)", "rgba(92,185,138,0.10)", "rgba(92,185,138,0.35)", el.getAttribute("data-up"));
+      setTimeout(loop, 600 + Math.random() * 2600);
+    }, 900 + Math.random() * 1000);
   }
 
-  setTimeout(loop, 900);
+  setTimeout(loop, 1000);
 })();

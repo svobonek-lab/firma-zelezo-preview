@@ -3,265 +3,357 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zelezo Admin — operating system for metalwork & roofing companies</title>
-<meta name="description" content="Invoicing, documents and CRM in one place. Runs on your Synology NAS — no third-party cloud, no monthly fees.">
+<title>Zelezo Admin — operating system for metalwork &amp; roofing companies</title>
+<meta name="description" content="Invoicing, digital archive and CRM in one system running on your own Synology NAS. No third-party cloud, no monthly fees.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230a1628'/%3E%3Cpath d='M4 8h10M4 12h10M4 16h6' stroke='%232dd4bf' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23121826'/%3E%3Cpath d='M9 12h14M9 16h14M9 20h8' stroke='%23e0a24b' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
 </head>
 <body>
 
 <header>
   <div class="wrap header-row">
     <a class="brand" href="../index.html">
-      <div class="dot"></div>
-      <div class="brand-name">Zelezo&nbsp;Admin</div>
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M9 17h11"/></svg></span>
+      <span class="brand-name">Železo<em>Admin</em></span>
     </a>
-    <div class="nav-links">
-      <a href="#problem">Problem</a>
-      <a href="#features">Features</a>
-      <a href="#preview">Preview</a>
+    <nav class="nav">
+      <a href="#system">System</a>
+      <a href="#deploy">Deployment</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
-      <span class="lang-toggle">
-        <a href="../index.html">Čeština</a>
-        <a class="active" href="index.html">EN</a>
+      <span class="lang">
+        <a href="../index.html">CS</a><a class="active" href="index.html">EN</a>
       </span>
-    </div>
+    </nav>
   </div>
 </header>
 
 
+<!-- ================= HERO ================= -->
 <section class="hero">
   <div class="wrap">
-    <div class="hero-eyebrow">Invoicing · documents · CRM on your NAS</div>
-    <h1>Your business without chaos,<br>data <span>only yours</span>, not in someone&apos;s cloud.</h1>
-    <p>Invoices, contracts, customers and scans in one connected system — running directly on
-       your Synology NAS. No monthly subscriptions, no per-user fees, no third-party servers.</p>
+    <span class="eyebrow"><span class="dot"></span>Runs on your NAS, not in someone&apos;s cloud</span>
+    <h1>
+      <span class="line">Invoices, documents and customers</span>
+      <span class="line">in one place, <span class="accent">under your control</span></span>
+    </h1>
+    <p class="lede">An operating system for metalwork and roofing companies. One piece of software, three areas — and your data stays physically on your own server.</p>
     <div class="hero-ctas">
-      <a href="#contact" class="btn btn-primary">Book a demo →</a>
-      <a href="#preview" class="btn">See it live</a>
+      <a class="btn btn-primary" href="#deploy">Book a free demo
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn-ghost" href="#system">What&apos;s included</a>
     </div>
-    <div class="hero-note">Deployed on your NAS in ~15 minutes &middot; everything in one place</div>
+    <p class="hero-note">Purchase price lower than a year of a typical cloud CRM · deployed in ~15 minutes</p>
   </div>
 </section>
 
 
+<!-- ================= STRIPE ================= -->
 <div class="stripe">
-  <div><b>3</b><span>areas in one system</span></div>
-  <div><b>0</b><span>per user, per month</span></div>
-  <div><b>15 min</b><span>to first launch</span></div>
-  <div><b>100%</b><span>data stays with you</span></div>
+  <div class="stat"><b>3</b><span class="lbl">areas in one system</span></div>
+  <div class="stat"><b class="mono">0 <span>€</span></b><span class="lbl">per user, per month</span></div>
+  <div class="stat"><b>~15 <span>min</span></b><span class="lbl">to first launch</span></div>
+  <div class="stat"><b>100 <span>%</span></b><span class="lbl">of data stays with you</span></div>
 </div>
 
 
-<section id="problem">
+<!-- ================= PROBLEM ================= -->
+<section>
   <div class="wrap">
-    <div class="section-eyebrow">The reality of a small metalwork firm</div>
-    <div class="section-title">Invoice in a folder,<br>contract in an e-mail, scan in the phone</div>
-    <div class="section-sub">Sounds familiar — and you&apos;re not alone. This is what we most often hear from metalwork and roofing owners with 3–30 people.</div>
+    <div class="section-head">
+      <div class="kicker">Why we do this</div>
+      <h2>Small companies rarely waste money.<br>They waste time looking for things.</h2>
+      <p>An invoice at the accountant&apos;s, a scan in the foreman&apos;s phone, a contract in an e-mail. Tracking something down eats half an hour nobody ever bills.</p>
+    </div>
     <div class="problem-grid">
-      <div class="problem-card"><b>Documents everywhere</b><p>Invoice at the accountant&apos;s, scan in the foreman&apos;s phone, contract in an e-mail. Finding one takes half an hour.</p></div>
-      <div class="problem-card"><b>Customers in memory</b><p>History, job status and quotes live more in heads than in a system. A new colleague knows nothing.</p></div>
-      <div class="problem-card"><b>Paying for third-party cloud</b><p>Monthly CRM fees grow with users, and your data sits on a server you don&apos;t own.</p></div>
+      <div class="problem">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v10H4z"/><path d="M4 10h16"/><path d="M8 15h3M14 15h3"/></svg></div>
+        <h3>Paper gets lost</h3>
+        <p>A scan or invoice sits in one of ten places. Nobody quite knows where, and every search costs energy you don&apos;t have.</p>
+      </div>
+      <div class="problem">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><circle cx="17" cy="9" r="2.2"/><path d="M16 15a4 4 0 0 1 5 4"/></svg></div>
+        <h3>Customers live in heads</h3>
+        <p>History, quote status and agreements live in the owner&apos;s memory. A new colleague joins or the firm grows — and the knowledge leaves with people.</p>
+      </div>
+      <div class="problem">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.2 2.2M8 9l4 4M6 13L4 11M15 6l3-1 1 3M9 15l-2 4 4-2M16 13a3 3 0 1 0 2.5-2.9"/></svg></div>
+        <h3>Monthly fees keep growing</h3>
+        <p>Cloud CRMs bill you like a subscription. The cost rises with every user — and your data sits on a server you don&apos;t own.</p>
+      </div>
     </div>
   </div>
 </section>
 
 
-<section id="features" style="background:var(--panel-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+<!-- ================= SYSTEM / FEATURES ================= -->
+<section id="system" style="background:var(--ink-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
   <div class="wrap">
-    <div class="section-eyebrow">What you get</div>
-    <div class="section-title">Three modules, one connected system</div>
-    <div class="section-sub">Everything talks to each other — a received invoice is filed, an issued document is stored with the job, and every customer has a full history.</div>
+    <div class="section-head">
+      <div class="kicker">What&apos;s included</div>
+      <h2>Three modules. One source of truth.</h2>
+      <p>Not a pile of tools — one connected system. An invoice is logged, a document is filed into the job&apos;s folder, a contact keeps its full history.</p>
+    </div>
     <div class="feature-grid">
-      <div class="feature"><div class="feature-num">01</div><div><b>Invoicing</b><p>Issue and receive invoices with one click. Overview of issued / paid / overdue, PDF with your logo saved straight to the folder.</p></div></div>
-      <div class="feature"><div class="feature-num">02</div><div><b>Digital archive</b><p>A scan of a contract, certificate or warranty card — CZ OCR turns paper into searchable text. Find anything in seconds.</p></div></div>
-      <div class="feature"><div class="feature-num">03</div><div><b>CRM</b><p>All customers with full history — from enquiry to complaint. Nobody gets lost and everyone knows who owns what.</p></div></div>
-      <div class="feature"><div class="feature-num">04</div><div><b>Automatic folders</b><p>Every job and invoice gets its own folder structure on your NAS — nothing gets mixed up and everything is in place.</p></div></div>
-      <div class="feature"><div class="feature-num">05</div><div><b>Custom domains + HTTPS</b><p>One secure entry point to all services through a proxy with Let&apos;s Encrypt. Invoices, documents and CRM on your own addresses.</p></div></div>
-      <div class="feature"><div class="feature-num">06</div><div><b>Backups &amp; monitoring</b><p>Automatic encrypted backups every night and 24/7 monitoring that everything keeps running.</p></div></div>
+      <div class="feature">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l1 18-7-4-7 4z"/></svg></div>
+        <div>
+          <h3>Invoicing</h3>
+          <p>Issue invoices from contacts and jobs with one click. Overview of issued / paid / overdue. A PDF with your logo is saved straight into the job&apos;s folder.</p>
+          <div class="detail">invoice.firma-zelezo.cz</div>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h9l4 4v16H6z"/><path d="M14 2v5h5"/><path d="M9 13h6M9 17h6M9 9h2"/></svg></div>
+        <div>
+          <h3>Digital archive</h3>
+          <p>Contracts, certificates and warranty cards scanned with Czech OCR. Paper becomes searchable text — find anything in seconds.</p>
+          <div class="detail">docs.firma-zelezo.cz</div>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/></svg></div>
+        <div>
+          <h3>CRM</h3>
+          <p>All customers with full history — from first contact to complaint. You know who owns what, and nobody gets lost.</p>
+          <div class="detail">crm.firma-zelezo.cz</div>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4v2H3z"/><path d="M5 9v8M9 9v8M15 9v8M19 9v8"/><path d="M3 21h18"/></svg></div>
+        <div>
+          <h3>Automatic folders</h3>
+          <p>The system creates a folder structure on your NAS for every job and invoice. Photos, contracts and invoices — each in its place, no arguments.</p>
+          <div class="detail">/Jobs/2026-104/…</div>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1.6"/></svg></div>
+        <div>
+          <h3>Custom domains &amp; HTTPS</h3>
+          <p>One secure entry point to all services. Your own addresses and Let&apos;s Encrypt encryption — without exposing ports to the internet.</p>
+          <div class="detail">::1 · 443</div>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 3v6h-6"/><path d="M12 7v5l3 3"/></svg></div>
+        <div>
+          <h3>Backups &amp; monitoring</h3>
+          <p>Encrypted backups every night and continuous monitoring. It isn&apos;t idle — it works for you, so you can focus on the job.</p>
+          <div class="detail">daily 02:00</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 
-<section id="preview">
+<!-- ================= LIVE PREVIEW ================= -->
+<section>
   <div class="wrap">
-    <div class="section-eyebrow">Live preview</div>
-    <div class="section-title">This is how it runs for us</div>
-    <div class="section-sub">The administrator dashboard — all services in one place. Statuses refresh live, exactly like in production.</div>
-    <div class="titleblock preview-shell">
-      <div class="tb-corner tl"></div><div class="tb-corner tr"></div><div class="tb-corner bl"></div><div class="tb-corner br"></div>
-      <div class="dash-bar">
+    <div class="section-head">
+      <div class="kicker">Live preview</div>
+      <h2>This is how it runs for us</h2>
+      <p>All services on one admin overview screen. Statuses refresh live, exactly like in production.</p>
+    </div>
+    <div class="preview-frame">
+      <div class="preview-bar">
         <div class="traffic"><span class="t-red"></span><span class="t-yellow"></span><span class="t-green"></span></div>
-        <span class="dash-url">https://admin.firma-zelezo.cz</span>
+        <span class="preview-url"><b>admin.</b>firma-zelezo.cz</span>
       </div>
-      <div class="dash-grid">
+      <div class="preview-body">
 
-        <div class="status-row">
-          <div class="status-left">
-            <span class="status-icon" style="background:var(--orange)">💰</span>
-            <div>
-              <div class="status-name">Invoicing · InvoiceNinja</div>
-              <div class="status-url">fakturace.firma-zelezo.cz</div>
-            </div>
-          </div>
-          <span class="status-pill" data-service="invoice" data-up="online" data-checking="test">online</span>
+        <div class="service">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M6 3h12l1 18-7-4-7 4z"/></svg></div>
+          <div class="meta"><div class="name">Invoicing · InvoiceNinja</div><div class="sub">invoice.firma-zelezo.cz</div></div>
+          <span class="pill" data-service="invoice" data-up="online" data-checking="check">online</span>
         </div>
 
-        <div class="status-row">
-          <div class="status-left">
-            <span class="status-icon" style="background:var(--teal)">📄</span>
-            <div>
-              <div class="status-name">Digital archive · Paperless</div>
-              <div class="status-url">dokumenty.firma-zelezo.cz</div>
-            </div>
-          </div>
-          <span class="status-pill" data-service="paperless" data-up="online" data-checking="test">online</span>
+        <div class="service">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M6 2h9l4 4v16H6z"/><path d="M14 2v5h5"/><path d="M9 13h6M9 17h6M9 9h2"/></svg></div>
+          <div class="meta"><div class="name">Digital archive · Paperless-ngx</div><div class="sub">docs.firma-zelezo.cz</div></div>
+          <span class="pill" data-service="paperless" data-up="online" data-checking="check">online</span>
         </div>
 
-        <div class="status-row">
-          <div class="status-left">
-            <span class="status-icon" style="background:var(--violet)">🤝</span>
-            <div>
-              <div class="status-name">CRM · SuiteCRM</div>
-              <div class="status-url">crm.firma-zelezo.cz</div>
-            </div>
-          </div>
-          <span class="status-pill" data-service="crm" data-up="online" data-checking="test">online</span>
+        <div class="service">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/></svg></div>
+          <div class="meta"><div class="name">CRM · SuiteCRM</div><div class="sub">crm.firma-zelezo.cz</div></div>
+          <span class="pill" data-service="crm" data-up="online" data-checking="check">online</span>
         </div>
 
-        <div class="status-row">
-          <div class="status-left">
-            <span class="status-icon" style="background:var(--yellow)">🛡️</span>
-            <div>
-              <div class="status-name">Proxy + HTTPS · NPM</div>
-              <div class="status-url">Let&apos;s Encrypt</div>
-            </div>
-          </div>
-          <span class="status-pill" data-service="npm" data-up="online" data-checking="test">online</span>
+        <div class="service">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+          <div class="meta"><div class="name">Proxy + HTTPS · NPM</div><div class="sub">Let&apos;s Encrypt · 443</div></div>
+          <span class="pill" data-service="npm" data-up="online" data-checking="check">online</span>
         </div>
 
-        <div class="status-row">
-          <div class="status-left">
-            <span class="status-icon" style="background:var(--red)">💾</span>
-            <div>
-              <div class="status-name">Backups · Duplicati</div>
-              <div class="status-url">daily 02:00 · encrypted</div>
-            </div>
-          </div>
-          <span class="status-pill" data-service="duplicati" data-up="online" data-checking="test">online</span>
+        <div class="service">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 3v6h-6"/><path d="M12 7v5l3 3"/></svg></div>
+          <div class="meta"><div class="name">Backups · Duplicati</div><div class="sub">daily 02:00 · encrypted</div></div>
+          <span class="pill" data-service="duplicati" data-up="online" data-checking="check">online</span>
         </div>
 
-        <div class="status-row">
-          <div class="status-left">
-            <span class="status-icon" style="background:var(--teal)">📈</span>
-            <div>
-              <div class="status-name">Monitoring · Uptime Kuma</div>
-              <div class="status-url">24/7 · alert on failure</div>
-            </div>
-          </div>
-          <span class="status-pill" data-service="uptime" data-up="online" data-checking="test">online</span>
+        <div class="service">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M2 12h4l3-8 4 16 3-8h6"/></svg></div>
+          <div class="meta"><div class="name">Monitoring · Uptime Kuma</div><div class="sub">24/7 · alert on failure</div></div>
+          <span class="pill" data-service="uptime" data-up="online" data-checking="check">online</span>
         </div>
 
       </div>
-      <div class="preview-caption">statuses refresh live</div>
     </div>
+    <p class="preview-note">Statuses refresh live · real layout of services on a Synology NAS</p>
   </div>
 </section>
 
 
-<section id="how" style="background:var(--panel-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+<!-- ================= DEPLOYMENT ================= -->
+<section id="deploy" style="background:var(--ink-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
   <div class="wrap">
-    <div class="section-eyebrow">Deployment</div>
-    <div class="section-title">Three steps to go live</div>
-    <div class="how-steps">
-      <div class="how-step"><div class="how-num">1</div><b>Install on your NAS</b><p>One command in Synology Container Manager. The system runs fully at your place — no third-party cloud.</p></div>
-      <div class="how-step"><div class="how-num">2</div><b>Connect your data</b><p>Upload invoices, contracts and contacts. OCR processes them at once, CRM organises your customers.</p></div>
-      <div class="how-step"><div class="how-num">3</div><b>Your own addresses</b><p>Set up domains and HTTPS (or LAN access only). You and your team log in and go.</p></div>
+    <div class="section-head">
+      <div class="kicker">Deployment</div>
+      <h2>Live in four steps</h2>
+      <p>We deliver a finished, configured system — not a "project to clean up", but something you work on the week after installation.</p>
+    </div>
+    <div class="flow">
+      <div class="flow-step">
+        <div class="num">01 — INSTALL</div>
+        <h3>On your NAS</h3>
+        <p>We install it on your Synology (or another Docker server). Everything runs at your place, with no cloud dependency.</p>
+      </div>
+      <div class="flow-step">
+        <div class="num">02 — DATA MIGRATION</div>
+        <h3>Your history comes with you</h3>
+        <p>We upload invoices, contracts and contacts and OCR processes them at once. You don&apos;t start from scratch.</p>
+      </div>
+      <div class="flow-step">
+        <div class="num">03 — TRAINING</div>
+        <h3>Your team can use it</h3>
+        <p>We train your people on real data. Within a week everything runs on its own, without help calls.</p>
+      </div>
+      <div class="flow-step">
+        <div class="num">04 — SUPPORT</div>
+        <h3>Then we keep it running</h3>
+        <p>3 months of support included, then supervision to fit you. We watch the backups on your behalf too.</p>
+      </div>
     </div>
   </div>
 </section>
 
 
+<!-- ================= PRICING ================= -->
 <section id="pricing">
   <div class="wrap">
-    <div class="section-eyebrow">A model that makes sense</div>
-    <div class="section-title">Pay once, own it forever</div>
-    <div class="section-sub">No monthly per-user fees — the system runs on your hardware and you have full control over the data.</div>
-    <div class="pricing-grid">
-      <div class="price-card">
-        <div class="price-tier">Basic</div>
-        <div class="price-amt">1&nbsp;450&nbsp;€<small>/one-time</small></div>
-        <div class="price-desc">For a firm that wants invoices and documents finally in a system.</div>
-        <ul class="price-list">
-          <li>Invoicing (issued + received)</li>
-          <li>Digital archive + CZ OCR</li>
-          <li>Installation on your Synology NAS</li>
-          <li>Backups and monitoring included</li>
+    <div class="section-head">
+      <div class="kicker">Pricing</div>
+      <h2>Pay once. Own it forever.</h2>
+      <p>No per-user subscription. A one-time payment — the system is yours, and so is your data.</p>
+    </div>
+    <div class="pricing">
+      <div class="price">
+        <div class="tier">Basic</div>
+        <div class="amount">1&nbsp;450 <span>€</span><small>&nbsp;/ one-time</small></div>
+        <p class="desc">For a firm that finally wants invoices and documents in a system.</p>
+        <ul>
+          <li>Invoicing — issued and received</li>
+          <li>Digital archive with Czech OCR</li>
+          <li>Installation on your NAS</li>
+          <li>Backups and monitoring</li>
         </ul>
-        <a href="#contact" class="btn">Request</a>
+        <a class="btn" href="#faq">I have a question</a>
       </div>
-      <div class="price-card featured">
-        <div class="price-badge">Most popular</div>
-        <div class="price-tier">Pro</div>
-        <div class="price-amt">2&nbsp;750&nbsp;€<small>/one-time</small></div>
-        <div class="price-desc">Full system with CRM and custom domains for firms with a team.</div>
-        <ul class="price-list">
+
+      <div class="price featured">
+        <div class="badge">Most popular</div>
+        <div class="tier">Pro</div>
+        <div class="amount">2&nbsp;750 <span>€</span><small>&nbsp;/ one-time</small></div>
+        <p class="desc">Full system with CRM and custom domains for a firm with a team.</p>
+        <ul>
           <li>Everything in Basic</li>
           <li>CRM — customers and history</li>
-          <li>Custom domains + HTTPS (Let&apos;s Encrypt)</li>
-          <li>3 months of onboarding support</li>
+          <li>Custom domains + HTTPS</li>
+          <li>Migration of existing data</li>
           <li>Team training</li>
+          <li>3 months of onboarding support</li>
         </ul>
-        <a href="#contact" class="btn btn-primary">Request</a>
+        <a class="btn btn-primary" href="mailto:info@firma-zelezo.cz?subject=Zelezo%20Admin%20Pro">Request Pro</a>
       </div>
-      <div class="price-card">
-        <div class="price-tier">Custom</div>
-        <div class="price-amt">4&nbsp;600&nbsp;€+<small>/one-time</small></div>
-        <div class="price-desc">Accounting integration, field app, multiple locations.</div>
-        <ul class="price-list">
+
+      <div class="price">
+        <div class="tier">Custom</div>
+        <div class="amount">from&nbsp;4&nbsp;600 <span>€</span></div>
+        <p class="desc">When you need more — accounting integration, field app, multiple locations.</p>
+        <ul>
           <li>Everything in Pro</li>
           <li>Accounting integration (Pohoda, ABRA…)</li>
-          <li>Mobile app for field staff</li>
+          <li>App for field staff</li>
           <li>Priority support</li>
         </ul>
-        <a href="#contact" class="btn">Free consultation</a>
+        <a class="btn" href="mailto:info@firma-zelezo.cz?subject=Zelezo%20Admin%20custom">Free consultation</a>
       </div>
     </div>
   </div>
 </section>
 
 
-<section id="faq" style="background:var(--panel-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+<!-- ================= FAQ ================= -->
+<section id="faq" style="background:var(--ink-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
   <div class="wrap">
-    <div class="section-eyebrow">Questions</div>
-    <div class="section-title" style="margin-bottom:40px;">Frequently asked</div>
+    <div class="section-head">
+      <div class="kicker">FAQ</div>
+      <h2>What you&apos;re probably wondering</h2>
+    </div>
     <div class="faq">
-      <div class="faq-item"><b>Do we need a Synology NAS?</b><p>Yes, the system runs via Docker on Synology (or another NAS/server with Docker support). If you don&apos;t have one, we&apos;ll help you choose — the purchase price is far lower than a year of a typical cloud CRM subscription.</p></div>
-      <div class="faq-item"><b>What if we have no IT person?</b><p>Installation is a single guided script — even the owner can handle it. The Pro bundle includes 3 months of onboarding support.</p></div>
-      <div class="faq-item"><b>Is our data safe?</b><p>The data stays physically on your NAS. Nothing is copied to a third-party cloud. Connections are encrypted with HTTPS and backups are encrypted and automatic.</p></div>
-      <div class="faq-item"><b>Can we try it first?</b><p>Yes — we&apos;re happy to show a live demo on your data before you order, even with your real documents.</p></div>
+      <details open>
+        <summary>Do we need a Synology NAS? <span class="sig">+</span></summary>
+        <div class="body">Yes — the system runs on Docker, so you need a Synology (or another NAS/server with Docker). If you don&apos;t have one, we&apos;ll help you pick a suitable model. The purchase price is usually lower than a year of a cloud CRM subscription.</div>
+      </details>
+      <details>
+        <summary>We have no IT person. Can we handle it? <span class="sig">+</span></summary>
+        <div class="body">You don&apos;t have to. We do the installation and configuration, migrate the data and train the team. The Pro bundle includes 3 months of support — in practice you contact us only a few times.</div>
+      </details>
+      <details>
+        <summary>Is our data safe? <span class="sig">+</span></summary>
+        <div class="body">The data physically stays on your NAS, not in a third-party cloud. Communication is encrypted with HTTPS and backups are encrypted and automatic. If you prefer, no remote access from the internet is enabled at all.</div>
+      </details>
+      <details>
+        <summary>Can we try it before buying? <span class="sig">+</span></summary>
+        <div class="body">Yes — we show a live demo on your own documents, before you order. You&apos;ll see invoicing, archive and CRM on real data.</div>
+      </details>
+      <details>
+        <summary>What if it stops fitting us? <span class="sig">+</span></summary>
+        <div class="body">The software is yours — no locked programs or closed licences. An export of your data is always yours; if you ever want to leave, you leave with your data. We never hold it "hostage".</div>
+      </details>
     </div>
   </div>
 </section>
 
 
-<section id="contact">
+<!-- ================= CTA ================= -->
+<section>
   <div class="wrap">
-    <div class="cta-final">
-      <h2>Let us show it to you live</h2>
-      <p>30 minutes, no obligation. You&apos;ll see the whole system — invoicing, archive and CRM — on your own documents.</p>
-      <a href="mailto:info@firma-zelezo.cz?subject=Zelezo%20Admin%20demo" class="btn btn-primary">Write to info@firma-zelezo.cz →</a>
+    <div class="cta">
+      <h2>Let us show it on your data</h2>
+      <p>30 minutes, no obligation. We&apos;ll walk through invoicing, archive and CRM on your own documents — not on sample ones.</p>
+      <div class="row">
+        <a class="btn btn-primary" href="mailto:info@firma-zelezo.cz?subject=Zelezo%20Admin%20demo">Book a demo
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <p class="contact">or write to <a href="mailto:info@firma-zelezo.cz">info@firma-zelezo.cz</a></p>
     </div>
   </div>
 </section>
 
 
 <footer>
-  <div class="wrap">Zelezo Admin — invoicing, documents and CRM. Runs on your own Synology NAS.</div>
+  <div class="wrap footer-row">
+    <span class="legal">© 2026 Zelezo Admin · Invoicing, documents and CRM on your own Synology NAS</span>
+    <span class="tag">built on Docker · Synology DS925+</span>
+  </div>
 </footer>
 
 <script src="../assets/app.js"></script>
