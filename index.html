@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Železo Admin – Náhled systému | Synology NAS</title>
+<meta name="description" content="Interaktivní náhled podnikového systému na Synology NAS – fakturace, dokumenty a CRM na jednom místě.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%234f8cff'/%3E%3Cpath d='M7 8h10M7 12h10M7 16h6' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      <span class="logo"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="4" stroke="white" stroke-width="2"/><path d="M8 9h8M8 13h8M8 17h5" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></span>
+      Železo&nbsp;Admin
+    </a>
+    <div class="nav-links">
+      <a href="#preview">Náhled</a>
+      <a href="#how">Jak funguje</a>
+      <a href="#services">Služby</a>
+      <a href="#security">Bezpečnost</a>
+      <span class="lang-toggle">
+        <a class="active" href="index.html">Čeština</a>
+        <a href="en/index.html">EN</a>
+      </span>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <span class="badge"><span class="dot"></span>Živý náhled – běží na Synology NAS</span>
+    <h1>Fakturace, dokumenty a&nbsp;CRM<br>na jednom <span class="grad">bezpečném místě</span></h1>
+    <p class="sub">Váš vlastní podnikový systém hostovaný v&nbsp;domácím NAS r&nbsp;Synology. Vše pod kontrolou, data jen vaše, zálohy automatické.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="#preview">Zobrazit náhled</a>
+      <a class="btn btn-ghost" href="#services">Přehled služeb</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== DASHBOARD PREVIEW ===== -->
+<section class="dashboard" id="preview">
+  <div class="container">
+    <div class="dash">
+      <div class="dash-bar">
+        <div class="traffic"><span class="t-traffic-red"></span><span class="t-yellow"></span><span class="t-green"></span></div>
+        <span class="dash-url">https://admin.firma-zelezo.cz</span>
+      </div>
+      <div class="dash-grid">
+
+        <div class="status-row">
+          <div class="status-left">
+            <span class="status-icon" style="background:#f39c12">🧾</span>
+            <div>
+              <div class="status-name">InvoiceNinja</div>
+              <div class="status-url">Fakturace · DPH · platební doklady</div>
+            </div>
+          </div>
+          <span class="status-pill" data-service="invoice" data-up="online" data-checking="kontrola" data-interval="6200">🧾</span>
+        </div>
+
+        <div class="status-row">
+          <div class="status-left">
+            <span class="status-icon" style="background:#4f8cff">📄</span>
+            <div>
+              <div class="status-name">Paperless-ngx</div>
+              <div class="status-url">Smlouvy · faktury · certifikáty (OCR čeština)</div>
+            </div>
+          </div>
+          <span class="status-pill" data-service="paperless" data-up="online" data-checking="kontrola" data-interval="7000">📄</span>
+        </div>
+
+        <div class="status-row">
+          <div class="status-left">
+            <span class="status-icon" style="background:#a78bfa">🤝</span>
+            <div>
+              <div class="status-name">SuiteCRM</div>
+              <div class="status-url">Zákazníci · obchodní případy · nabídky</div>
+            </div>
+          </div>
+          <span class="status-pill" data-service="crm" data-up="online" data-checking="kontrola" data-interval="6500">🤝</span>
+        </div>
+
+        <div class="status-row">
+          <div class="status-left">
+            <span class="status-icon" style="background:#2ecc71">🛡️</span>
+            <div>
+              <div class="status-name">Nginx Proxy Manager</div>
+              <div class="status-url">HTTPS · Let&#39;s Encrypt · vlastní domény</div>
+            </div>
+          </div>
+          <span class="status-pill" data-service="npm" data-up="online" data-checking="kontrola" data-interval="7800">🛡️</span>
+        </div>
+
+        <div class="status-row">
+          <div class="status-left">
+            <span class="status-icon" style="background:#e67e22">💾</span>
+            <div>
+              <div class="status-name">Duplicati</div>
+              <div class="status-url">Automatické zálohy · denně 02:00</div>
+            </div>
+          </div>
+          <span class="status-pill" data-service="duplicati" data-up="online" data-checking="kontrola" data-interval="8000">💾</span>
+        </div>
+
+        <div class="status-row">
+          <div class="status-left">
+            <span class="status-icon" style="background:#e74c3c">📈</span>
+            <div>
+              <div class="status-name">Uptime Kuma</div>
+              <div class="status-url">Monitoring dostupnosti · 99,9%</div>
+            </div>
+          </div>
+          <span class="status-pill" data-service="uptime" data-up="online" data-checking="kontrola" data-interval="8400">📈</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="section" id="how">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Workflow</span>
+      <h2>Jak to funguje</h2>
+      <p>Od příchozího dokumentu až po hotovou fakturu – každý krok má svůj automatizovaný proces.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">1</span>
+        <h3>Přijetí dokumentu</h3>
+        <p>PDF hodíte do složky <code>consume</code> (přes SMB) nebo nahrajete ve webu. Systém dokument chytí v&nbsp;reálném čase.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">2</span>
+        <h3>OCR a rozpoznání</h3>
+        <p>Paperless převede sken na prohledávatelný text (čeština + angličtina) a uloží do databáze. Navštívené soubory jsou tagované.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">3</span>
+        <h3>Fakturace</h3>
+        <p>Z údajů zákazníka v&nbsp;CRM vystavíte fakturu v&nbsp;InvoiceNinja – s&nbsp;DPH, čísly a&nbsp;přílohou.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">4</span>
+        <h3>Zálohování a monitoring</h3>
+        <p>Duplicati denně zálohuje data, Uptime Kuma hlídá, že vše běží. Vy se soustředíte jen na práci.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Služby</span>
+      <h2>Modulární systém na míru</h2>
+      <p>Každá služba běží v&nbsp;izolovaném kontejneru. Přidejte, uberte nebo upravte podle potřeby – bez zásahu do zbytku systému.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <span class="status-icon" style="background:#f39c12">🧾</span>
+        <h3>InvoiceNinja</h3>
+        <p>Kompletní fakturace – vystavování, DPH, platební doklady, opakující se faktury a&nbsp;přehledy.</p>
+        <div class="meta"><span class="tag">Port 8011</span><span class="tag">Faktury</span><span class="tag">DPH</span></div>
+      </div>
+      <div class="card">
+        <span class="status-icon" style="background:#4f8cff">📄</span>
+        <h3>Paperless-ngx</h3>
+        <p>Digitální archiv dokumentů s&nbsp;OCR. Vše prohledávatelné, tagované, kdykoliv po ruce.</p>
+        <div class="meta"><span class="tag">Port 8012</span><span class="tag">OCR</span><span class="tag">Archiv</span></div>
+      </div>
+      <div class="card">
+        <span class="status-icon" style="background:#a78bfa">🤝</span>
+        <h3>SuiteCRM</h3>
+        <p>Řízení vztahů se zákazníky, obchodní případy, nabídky a&nbsp;interní týmová spolupráce.</p>
+        <div class="meta"><span class="tag">Port 8013</span><span class="tag">CRM</span><span class="tag">Zákazníci</span></div>
+      </div>
+      <div class="card">
+        <span class="status-icon" style="background:#2ecc71">🛡️</span>
+        <h3>Nginx Proxy Manager</h3>
+        <p>Snadný HTTPS a&nbsp;vlastní domény s&nbsp;Let&#39;s Encrypt. Jeden vstupní bod ke všem službám.</p>
+        <div class="meta"><span class="tag">Port 8181</span><span class="tag">HTTPS</span><span class="tag">Proxy</span></div>
+      </div>
+      <div class="card">
+        <span class="status-icon" style="background:#e67e22">💾</span>
+        <h3>Duplicati</h3>
+        <p>Automatické šifrované zálohy celého systému – lokálně i&nbsp;do cloudu, s&nbsp;početným plánem.</p>
+        <div class="meta"><span class="tag">Port 8014</span><span class="tag">Backup</span><span class="tag">2:00</span></div>
+      </div>
+      <div class="card">
+        <span class="status-icon" style="background:#e74c3c">📈</span>
+        <h3>Uptime Kuma</h3>
+        <p>24/7 monitoring dostupnosti všech služeb, s&nbsp;okamžitým upozorněním při výpadku.</p>
+        <div class="meta"><span class="tag">Port 8015</span><span class="tag">Monitoring</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ARCHITECTURE ===== -->
+<section class="section" id="architecture">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Architektura</span>
+      <h2>Jedna instalace, mnoho vrstev</h2>
+      <p>Pod každou službou běží databáze a&nbsp;cache oddělené tak, aby si navzájem nekonkurovaly.</p>
+    </div>
+    <div class="arch">
+      <div class="arch-item"><div class="ic">🐬</div><h4>MariaDB 10.11</h4><p>Fakturace + CRM</p></div>
+      <div class="arch-item"><div class="ic">🐘</div><h4>PostgreSQL 16</h4><p>Paperless dokumenty</p></div>
+      <div class="arch-item"><div class="ic">⚡</div><h4>Redis 7</h4><p>Cache a&nbsp;relace</p></div>
+      <div class="arch-item"><div class="ic">🖨️</div><h4>Gotenberg + Tika</h4><p>Zpracování PDF a&nbsp;OCR</p></div>
+      <div class="arch-item"><div class="ic">🐳</div><h4>Docker / Synology</h4><p>Izolace a&nbsp;snadné nasazení</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECURITY ===== -->
+<section class="section" id="security">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Bezpečnost</span>
+      <h2>Vaše data zůstávají vaše</h2>
+    </div>
+    <div class="security">
+      <ul>
+        <li><span class="tick">✓</span> Hosting ve vlastním NAS – žádné cizí cloudové úložiště pro důvěrné dokumenty</li>
+        <li><span class="tick">✓</span> HTTPS šifrování přes Let&apos;s Encrypt na všech službách</li>
+        <li><span class="tick">✓</span> Automatické šifrované zálohy s&nbsp;retencí 7 denních / 4 týdenní / 12 měsíčních kopií</li>
+        <li><span class="tick">✓</span> Firewall + doporučený přístup pouze přes VPN (Tailscale/Synology VPN Server)</li>
+        <li><span class="tick">✓</span> Silná náhodná hesla generovaná při instalaci, uložená pouze v&nbsp;<code>.env</code></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section">
+  <div class="container">
+    <div class="cta-band">
+      <h2>Chcete to samé i&nbsp;pro vaši firmu?</h2>
+      <p>Připravím, nainstaluji a&nbsp;nakonfiguruji celý systém na vašem Synology NAS – fakturaci, archiv i&nbsp;CRM.</p>
+      <a class="btn btn-primary" href="mailto:info@firma-zelezo.cz?subject=Nasazen%C3%AD%20syst%C3%A9mu%20na%20NAS">Nezávazně se poptat</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">Železo&nbsp;Admin · Synology NAS · © 2026 · Náhled systému</div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
